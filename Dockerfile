@@ -10,6 +10,7 @@ RUN apt clean && \
 
 ARG CREATED
 ARG REVISION
+ARG VERSION
 ARG TITLE
 ARG DESCRIPTION
 ARG URL
@@ -20,6 +21,7 @@ LABEL \
   org.opencontainers.image.url="${URL}" \
   org.opencontainers.image.created="${CREATED}" \
   org.opencontainers.image.revision="${REVISION}" \
+  org.opencontainers.image.version="${VERSION}-${REVISION}"
   org.opencontainers.image.source="${URL}" \
   org.opencontainers.image.authors="Adhidarma Hadiwinoto  <adhisimon@tektrans.id>" \
   org.opencontainers.image.vendor="TEKTRANS" \
