@@ -3,10 +3,7 @@ FROM ${FROM}
 
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt update && apt upgrade -y && apt -y install john vim less nano
-
-RUN apt clean && \
-  rm -rf /var/lib/apt/lists/*
+RUN apt update && apt upgrade -y && apt -y install john vim less nano && apt clean && rm -rf /var/lib/apt/lists/*
 
 ARG CREATED
 ARG REVISION
