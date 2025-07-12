@@ -9,6 +9,8 @@ RUN apt update && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
+WORKDIR /root
+
 ARG CREATED
 ARG REVISION
 ARG VERSION
