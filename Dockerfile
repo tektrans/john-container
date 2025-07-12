@@ -11,6 +11,7 @@ RUN apt update && \
   rm -rf /var/lib/apt/lists/*
 
 COPY john.conf /etc/john/john.conf
+COPY bashrc /root/.bashrc
 
 WORKDIR /root
 
