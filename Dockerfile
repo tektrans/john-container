@@ -10,6 +10,8 @@ RUN apt update && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
+COPY john.conf /etc/john/john.conf
+
 WORKDIR /root
 
 ARG CREATED
