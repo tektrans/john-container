@@ -5,7 +5,7 @@ CREATED=`date --iso-8601=seconds -u`
 REVISION=`git rev-parse HEAD`
 VERSION=`date +%Y.%m.%d-%H%M`
 TITLE=john
-DESCRIPTION="Container for john the ripper, based on kalilinux/kali-roling"
+DESCRIPTION=Container for john the ripper, based on kalilinux/kali-roling
 URL=https://github.com/tektrans/john-container
 
 all:
@@ -21,10 +21,10 @@ build:
 		--build-arg REVISION=$(REVISION) \
 		--build-arg VERSION=$(VERSION) \
 		--build-arg TITLE=$(TITLE) \
-		--build-arg DESCRIPTION="Container for john the ripper, based on kalilinux/kali-roling" \
+		--build-arg DESCRIPTION="$(DESCRIPTION)" \
 		--build-arg URL=$(URL) \
 		--annotation=org.opencontainers.image.title=$(TITLE) \
-		--annotation=org.opencontainers.image.description="Container for john the ripper, based on kalilinux/kali-roling" \
+		--annotation=org.opencontainers.image.description="$(DESCRIPTION)" \
 		--annotation=org.opencontainers.image.created="$(CREATED)" \
 		--annotation=org.opencontainers.image.revision="$(REVISION)" \
 		--annotation=org.opencontainers.image.version="$(VERSION)-$(REVISION)" \
