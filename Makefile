@@ -1,6 +1,4 @@
-WP_VER=6.8.1
-PHP_VER=8.4
-
+FROM := docker.io/kalilinux/kali-rolling:latest
 TAG := ghcr.io/tektrans/john:latest
 
 CREATED=`date --iso-8601=seconds -u`
@@ -17,6 +15,7 @@ build:
 	podman pull $(FROM)
 	echo '** BUILDING...'
 	podman build --pull=newer -t $(TAG) \
+		--build-arg FROM=$(FROM) \
 		--build-arg CREATED=$(CREATED) \
 		--build-arg REVISION=$(REVISION) \
 		--build-arg TITLE=$(TITLE)

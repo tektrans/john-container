@@ -1,4 +1,5 @@
-FROM docker.io/kalilinux/kali-rolling:latest
+ARG FROM
+FROM ${FROM}
 
 ARG DEBIAN_FRONTEND=noninteractive
 
