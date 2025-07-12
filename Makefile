@@ -18,7 +18,7 @@ build:
 		--build-arg FROM=$(FROM) \
 		--build-arg CREATED=$(CREATED) \
 		--build-arg REVISION=$(REVISION) \
-		--build-arg TITLE=$(TITLE)
+		--build-arg TITLE=$(TITLE) \
 		--build-arg DESCRIPTION="$(DESCRIPTION)" \
 		--build-arg URL=$(URL) \
 		--annotation=org.opencontainers.image.title=$(TITLE) \
