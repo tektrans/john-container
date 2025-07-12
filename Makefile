@@ -31,13 +31,7 @@ build:
 		--annotation=org.opencontainers.image.vendor=TEKTRANS \
 		--annotation=org.opencontainers.image.licenses=gpl3GPL-2.0-or-later \
 		$(BUILD_ARGS) \
-		. && \
-	podman run --rm ${TAG} php --version > php-extensions.txt && \
-	echo >> php-extensions.txt && \
-	podman run --rm $(TAG) php -m >> php-extensions.txt && \
-	podman run --rm $(TAG) apachectl -v > apache2-modules.txt 2>/dev/null && \
-	echo >> apache2-modules.txt && \
-	podman run --rm $(TAG) apachectl -M >> apache2-modules.txt 2>/dev/null
+		.
 
 publish:
 	echo '** PUBLISHING...'
