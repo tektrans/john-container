@@ -6,7 +6,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
   apt upgrade -y && \
   apt -y install \
-    john vim less nano bash-completion tmux wordlists wordlistraider && \
+    john vim less nano bash-completion tmux wordlists wordlistraider nodejs npm && \
   apt clean && \
   rm -rf /var/lib/apt/lists/*
 
