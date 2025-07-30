@@ -33,7 +33,7 @@ build:
 		--annotation=org.opencontainers.image.authors="Adhidarma Hadiwinoto <adhisimon@tektrans.id>" \
 		--annotation=org.opencontainers.image.vendor=TEKTRANS \
 		--annotation=org.opencontainers.image.licenses=gpl3GPL-2.0-or-later \
-		$(BUILD_ARGS) \
+		$(PODMAN_BUILD_ARGS) \
 		.
 
 publish:
